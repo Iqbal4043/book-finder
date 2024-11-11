@@ -37,12 +37,12 @@ const BookSearch = ({
             </div>
 
             {/* Sidebar for recent searches */}
-            {/* <div className="side-bar">
+            <div className="side-bar">
               <RecentSearch
                 onSearch={onSearch}
                 recentSearches={recentSearches}
               />
-            </div> */}
+            </div>
           </>
         )}
       </div>
