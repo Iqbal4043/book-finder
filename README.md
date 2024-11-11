@@ -24,4 +24,4 @@ Screenshot1
 
 Installation
 1. Clone the repository
-git clone https://github.com/your-username/book-finder.git
+git clone https://github.com/Iqbal4043/book-finder.git
