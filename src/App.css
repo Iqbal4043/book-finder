@@ -1,38 +1,239 @@
-.App {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #451d59;
+}
+html {
+  /* 1rem = 10px */
+  font-size: 62.5%;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 3rem;
+  background-color: #f5f5f5;
+}
+.logo {
+  font-size: 3rem;
+  font-weight: bolder;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+nav {
+  display: flex;
+  gap: 1.5rem;
+}
+nav a {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #451d59;
+  font-weight: 600;
+}
+form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.search-input {
+  font-size: 1.4rem;
+  border: 0.1rem solid #451d59;
+  padding: 1rem;
+  border-radius: 1rem;
+  outline: none;
+  font-weight: 500;
+}
+.search-input::placeholder {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.search-icon {
+  font-size: 3rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.heading-box {
+  width: 100%;
+  margin: auto;
+  background-color: #451d59;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  margin-top: 1.5rem;
+}
+.heading-box h2 {
+  color: #fff;
+  font-size: 2rem;
+}
+
+/* home page */
+.box {
+  width: 97%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.left-container {
+  width: 75%;
+}
+.side-bar {
+  width: 23%;
+}
+
+/* Book Card */
+.book-card {
+  width: 100%;
+  margin: 2rem auto;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.book-card table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  table-layout: fixed;
+}
+.book-card th,
+.book-card td {
+  padding: 1rem;
+  text-align: left;
+  border: 0.1rem solid #ddd;
+  vertical-align: middle;
+}
+.book-card th {
+  background-color: #f4f4f9;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.book-card td {
+  font-size: 1.4rem;
+  word-wrap: break-word;
+}
+.book-card td:first-child {
+  font-weight: 600;
+}
+.book-card tr:hover {
+  background-color: #f9f9f9;
+}
+.clickable {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.clickable:hover {
+  color: #4caf50;
+}
+.loading-message {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #4caf50;
+  font-weight: bold;
+  margin-top: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* recent search */
+.recent-searches ul {
+  width: 100%;
+  margin-top: 2rem;
+  list-style-type: none;
+  padding: 0;
+}
+
+.recent-searches li {
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: #f0f0f0;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.recent-searches li p {
+  color: inherit;
+  text-decoration: underline;
+}
+.recent-searches li:hover {
+  background-color: #e0e0e0;
+  cursor: pointer;
+  color: #4caf50 !important;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 992px) {
+  html {
+    font-size: 55%;
+  }
+  header {
+    flex-wrap: wrap;
+    padding: 1.5rem;
+  }
+  .logo {
+    flex: 1 1 100%;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  nav {
+    display: none;
+  }
+  form {
+    flex: 1 1 100%;
+    justify-content: center;
+    margin-top: 1rem;
+    width: 90%;
+    margin: auto;
+  }
+  .search-input {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+  .search-icon {
+    font-size: 1.8rem;
+  }
+  .left-container,
+  .side-bar {
+    width: 100%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;
   }
-  to {
-    transform: rotate(360deg);
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+  nav {
+    display: none;
+  }
+  form {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .search-input {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+  .search-icon {
+    font-size: 1.8rem;
+  }
+
+  /* Book Card */
+  .book-card th:last-child,
+  .book-card td:last-child {
+    display: none;
   }
 }
