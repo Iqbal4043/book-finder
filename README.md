@@ -21,7 +21,7 @@ This app also features responsive design, local storage support for saving recen
 - **LocalStorage**: To store recent searches and top 10 books
 
 ## Screenshots
-![Screenshot1](./image/home-page.jpg)
+![Screenshot1](./public/image/home-page.png)
 
 ## Installation
 
